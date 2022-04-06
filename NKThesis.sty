@@ -804,8 +804,8 @@
   \NKT@tp@item{学\hskip 2em 院：}{xueyuan}\\
   \NKT@tp@item{系\hskip 2em 别：}{xibie}  \\
   \NKT@tp@item{专\hskip 2em 业：}{zhuanye}  \\
-  \NKT@tp@item{完成日期：}{lunwenwanchengshijian}\\   
   \NKT@tp@item{指导教师：}{zhidaojiaoshi} \\
+  \NKT@tp@item{完成日期：}{lunwenwanchengshijian}\\   
   \ifx\NKT@key@xiaowaidaoshi\NKT@string@null
     %% 没有校外导师
   \else
@@ -821,13 +821,13 @@
 \def\NKT@tp@item#1#2{%
   #1%
   \hskip 0.5em%
-  \underline{\hbox to 53mm{\zihaosi\songti\NKT@keyvalue{#2}\hfil}}}
+  \underline{\hbox to 53mm{\hfil \zihaosi\songti\NKT@keyvalue{#2}\hfil}}}
   
 \def\NKT@tb@item#1#2{%
   #1%
   \hskip 0.5em%
   % \underline{\hbox to 115mm{\zihaoxiaosan\textbf{\songti\NKT@keyvalue{#2}\hfil}}}}
-  \underline{\hbox to 115mm{\zihaosi\songti\NKT@keyvalue{#2}\hfil}}}
+  \underline{\hbox to 115mm{\hfil \zihaosi\songti\NKT@keyvalue{#2}\hfil}}}
   
 \def\NKT@declaration{
 本人郑重声明：所呈交的学位论文，是本人在指导教师指导下，进行研究工作所取得的成果。
