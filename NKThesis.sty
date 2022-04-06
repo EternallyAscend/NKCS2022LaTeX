@@ -31,7 +31,7 @@
 \ifxetex
   \RequirePackage{xeCJK}
   \edef\CJK@UnicodeEnc{UTF8}
-  \def\CJKaddEncHook#1#2{\expandafter\def\csname xeCJK@enc@#1\endcsname{#2}}
+  % \def\CJKaddEncHook#1#2{\expandafter\def\csname xeCJK@enc@#1\endcsname{#2}}
   \def\Unicode#1#2{\@tempcnta#1\relax
     \multiply\@tempcnta 256\relax
     \advance\@tempcnta#2\relax
@@ -287,7 +287,7 @@
   \fi
   {  
   \phantomsection
-  \addcontentsline{toc}{chapter}{\protect\numberline{目 录}{}}
+  % \addcontentsline{toc}{chapter}{\protect\numberline{目 录}{}}
   \@toclinefalse\chapter*{\contentsname}}
   \@starttoc{toc}%
   \if@restonecol
@@ -708,7 +708,7 @@
 
 \def\zhixie{
   \clearpage
-  \vspace*{24pt}
+  % \vspace*{24pt}
   \centerline{\zihaosi\rmfamily\bfseries 致\quad 谢}
   \phantomsection
   \addcontentsline{toc}{chapter}{\protect\numberline{致\quad 谢}{}}
@@ -717,26 +717,12 @@
   \fontsize{12}{20}\selectfont}
 \let\endzhixie\relax
 
-\def\resume{
-  \clearpage
-  \vspace*{24pt}
-  \centerline{\zihaosi\rmfamily\bfseries 个人简历}
-  \addcontentsline{toc}{chapter}{\protect\numberline{个人简历}{}}
-  \markboth{个人简历}{个人简历} 
-  \vspace*{18pt}
-  \fontsize{12}{20}\selectfont}
-\let\endresume\relax
-
-
-
-
-
 \def\zhaiyao{
   \clearpage
-  \vspace*{24pt}
+  % \vspace*{24pt}
   \centerline{\zihaosi\rmfamily\bfseries 摘\quad 要}
   \phantomsection
-  \addcontentsline{toc}{chapter}{\protect\numberline{摘 要}{}}
+  % \addcontentsline{toc}{chapter}{\protect\numberline{摘 要}{}}
   \markboth{摘\quad 要}{摘\quad 要} 
   \vspace*{18pt}
   \fontsize{12}{20}\selectfont}
@@ -744,11 +730,11 @@
 
 \def\abstract{
   \clearpage
-  \vspace*{24pt}
+  % \vspace*{24pt}
 %  \centerline{\zihaosi \jiacu Abstract}
   \centerline{\zihaosi \bfseries Abstract}
   \phantomsection
-  \addcontentsline{toc}{chapter}{\protect\numberline{Abstract}{}}  
+  % \addcontentsline{toc}{chapter}{\protect\numberline{Abstract}{}}  
   \markboth{Abstract}{Abstract}
   \vspace*{18pt}
   \fontsize{12}{20}\selectfont}
@@ -800,7 +786,6 @@
   
     \ifx\NKT@key@titleentwo\NKT@string@null
         %% 没有第二行英文标题
-        %\NKT@tb@item{\NKT@key@titleentwo}{titleentwo}\\
     \else
         \NKT@tb@item{\hskip 5em}{titleentwo}\\
     \fi
@@ -836,12 +821,13 @@
 \def\NKT@tp@item#1#2{%
   #1%
   \hskip 0.5em%
-  \underline{\hbox to 53mm{\zihaosi\cukai\NKT@keyvalue{#2}\hfil}}}
+  \underline{\hbox to 53mm{\zihaosi\songti\NKT@keyvalue{#2}\hfil}}}
   
 \def\NKT@tb@item#1#2{%
   #1%
   \hskip 0.5em%
-  \underline{\hbox to 115mm{\zihaoxiaosan\textbf{\cukai\NKT@keyvalue{#2}\hfil}}}}
+  % \underline{\hbox to 115mm{\zihaoxiaosan\textbf{\songti\NKT@keyvalue{#2}\hfil}}}}
+  \underline{\hbox to 115mm{\zihaosi\songti\NKT@keyvalue{#2}\hfil}}}
   
 \def\NKT@declaration{
 本人郑重声明：所呈交的学位论文，是本人在指导教师指导下，进行研究工作所取得的成果。
